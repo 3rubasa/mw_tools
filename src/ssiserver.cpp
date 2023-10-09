@@ -11,6 +11,9 @@
 
 #define RESPONSE_PART_SIZE LWIP_HTTPD_MAX_TAG_INSERT_LEN
 
+namespace mw_tools {
+namespace servers {
+
 static std::shared_ptr<ISSIServer> g_server;
 
 struct Context {
@@ -108,9 +111,9 @@ std::shared_ptr<ISSIHandler> SSIServer::GetHandler(int idx) {
 
 void SSIServer::Start() {
     g_server = shared_from_this();
-    httpd_init();
-    printf("Http server initialised\n");
 
     http_set_ssi_handler(ssi_handler, (const char **)m_ssi_tags, m_handlers.size());
     printf("SSI Initialized\n");
 }
+
+}}

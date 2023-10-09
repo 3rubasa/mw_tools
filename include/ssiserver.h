@@ -3,6 +3,9 @@
 #include <memory>
 #include <map>
 
+namespace mw_tools {
+namespace servers {
+
 class SSIServer : public ISSIServer, public std::enable_shared_from_this<SSIServer> {
 public:
     SSIServer();
@@ -17,3 +20,4 @@ private:
     
 };
 
+}}
