@@ -9,7 +9,7 @@
 #include <memory>
 #include <map>
 
-#define RESPONSE_PART_SIZE LWIP_HTTPD_MAX_TAG_INSERT_LEN
+#define RESPONSE_PART_SIZE (LWIP_HTTPD_MAX_TAG_INSERT_LEN - 1)
 
 namespace mw_tools {
 namespace servers {
